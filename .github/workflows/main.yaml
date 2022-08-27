@@ -14,9 +14,9 @@ jobs:
         id: hello
         with:
           who-to-greet: 'DevEnv'
-          devenv-api: "https://dev.devenv.io"
-          client-secret-key-id: "test1"
-          client-secret-key: "test2"
+          devenv-api: ${{ secrets.devenv_api }}
+          client-secret-key-id: ${{ secrets.devenv_secret_key_id }}
+          client-secret-key: ${{ secrets.devenv_secret_key }}
       # Use the output from the `hello` step
       - name: Get the output time
         run: echo "The time was ${{ steps.hello.outputs.time }}"
