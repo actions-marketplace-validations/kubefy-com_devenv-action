@@ -4,18 +4,22 @@ This action prints "Hello World" or "Hello" + the name of a person to greet to t
 
 ## Inputs
 
-## `who-to-greet`
+## `devenv-api-url`
 
-**Required** The name of the person to greet. Default `"World"`.
+**Required** Devenv API URL provided by Devenv Team.
 
-## Outputs
+## `devenv-client-secret-key-id`
 
-## `time`
+**Required** Client Secret Key Id provided by Devenv Team.
 
-The time we greeted you.
+## `devenv-client-secret-key`
+
+**Required** Client Secret Key provided by Devenv Team.
 
 ## Example usage
 
 uses: actions/hello-world-javascript-action@v1.1
 with:
-  who-to-greet: 'Mona the Octocat'
+  devenv-api-url: 'https://devenv.kubefy.io'
+  devenv-client-secret-key-id: 'ZL8qiN0AA2CsbphtcBvdmBS3p'
+  devenv-client-secret-key: 'C0DXruE0Ub1iAG1LJ0RGHmr98'

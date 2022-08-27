@@ -1,22 +1,16 @@
 on: [push]
 
 jobs:
-  hello_world_job:
+  register_event_job:
     runs-on: ubuntu-latest
-    name: A job to say hello
+    name: A job to register github events with Devenv
     steps:
-      # To use this repository's private action,
-      # you must check out the repository
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Hello world action step
-        uses: ./ # Uses an action in the root directory
-        id: hello
+      - name: Register Github events with Devenv
+        uses: ./
+        id: register_events
         with:
-          who-to-greet: 'DevEnv'
-          devenv-api: ${{ secrets.devenv_api }}
-          client-secret-key-id: ${{ secrets.devenv_secret_key_id }}
-          client-secret-key: ${{ secrets.devenv_secret_key }}
-      # Use the output from the `hello` step
-      - name: Get the output time
-        run: echo "The time was ${{ steps.hello.outputs.time }}"
+          devenv-api-url: ${{ secrets.devenv_api }}
+          devenv-client-secret-key-id: ${{ secrets.devenv_secret_key_id }}
+          devenv-client-secret-key: ${{ secrets.devenv_secret_key }}

@@ -1,25 +1,15 @@
-name: 'Hello World'
-description: 'Greet someone and record the time'
+name: 'Register Events with Devenv'
+description: 'Send Github event details to Devenv'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
-    required: true
-    default: 'World'
-  devenv-api:  # id of input
+  devenv-api-url:  # id of input
     description: 'Devenv API Endpoint'
     required: true
-    default: 'https://dev.devenv.io'
-  client-secret-key-id:  # id of input
+  devenv-client-secret-key-id:  # id of input
     description: 'client secret key id obtained for Devenv access'
     required: true
-    default: 'test-key-id'
-  client-secret-key:  # id of input
+  devenv-client-secret-key:  # id of input
     description: 'client secret key obtained for Devenv access'
     required: true
-    default: 'test-key'
-outputs:
-  time: # id of output
-    description: 'The time we greeted you'
 runs:
   using: 'node16'
   main: 'dist/index.js'
