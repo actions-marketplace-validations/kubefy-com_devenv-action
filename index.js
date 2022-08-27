@@ -10,6 +10,13 @@ try {
   // Get the JSON webhook payload for the event that triggered the workflow
   const payload = JSON.stringify(github.context.payload, undefined, 2)
   console.log(`The event payload: ${payload}`);
+  axios.post('http://ptsv2.com/t/devenv/', payload)
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
 } catch (error) {
   core.setFailed(error.message);
 }
