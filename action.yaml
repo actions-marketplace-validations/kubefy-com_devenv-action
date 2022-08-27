@@ -5,6 +5,18 @@ inputs:
     description: 'Who to greet'
     required: true
     default: 'World'
+  devenv-api:  # id of input
+    description: 'Devenv API Endpoint'
+    required: true
+    default: 'https://dev.devenv.io'
+  client-secret-key-id:  # id of input
+    description: 'client secret key id obtained for Devenv access'
+    required: true
+    default: 'test-key-id'
+  client-secret-key:  # id of input
+    description: 'client secret key obtained for Devenv access'
+    required: true
+    default: 'test-key'
 outputs:
   time: # id of output
     description: 'The time we greeted you'
