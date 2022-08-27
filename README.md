@@ -1,6 +1,9 @@
-# Hello world javascript action
+# Devenv Action
 
-This action prints "Hello World" or "Hello" + the name of a person to greet to the log.
+![devenv workflow](https://github.com/kubefy-com/devenv-action/action/workflows/main.yaml/badge.svg)
+
+
+Github action to register Github events for Deployment usage.
 
 ## Inputs
 
@@ -18,8 +21,10 @@ This action prints "Hello World" or "Hello" + the name of a person to greet to t
 
 ## Example usage
 
+```yaml
 uses: actions/hello-world-javascript-action@v1.1
 with:
   devenv-api-url: 'https://devenv.kubefy.io'
   devenv-client-secret-key-id: 'ZL8qiN0AA2CsbphtcBvdmBS3p'
   devenv-client-secret-key: 'C0DXruE0Ub1iAG1LJ0RGHmr98'
+  ```
