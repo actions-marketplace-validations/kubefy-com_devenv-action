@@ -1,6 +1,6 @@
 # Devenv Action
 
-![devenv workflow](https://github.com/kubefy-com/devenv-action/action/workflows/main.yaml/badge.svg)
+![ devenv workflow ](https://github.com/kubefy-com/devenv-action/actions/workflows/main.yaml/badge.svg)
 
 
 Github action to register Github events for Deployment usage.
